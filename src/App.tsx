@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { I18nProvider } from '@/i18n/i18n'
-import IntroLoader from '@/components/IntroLoader'
 import ScrollProgress from '@/components/ScrollProgress'
 import Topbar from '@/components/Topbar'
 import Footer from '@/components/Footer'
@@ -21,12 +20,10 @@ import FinalCTA from '@/sections/FinalCTA'
 import Faq from '@/sections/Faq'
 import Leadership from '@/sections/Leadership'
 
-export default function App({ runIntro = false }: { runIntro?: boolean }) {
+export default function App() {
   const [loginOpen, setLoginOpen] = useState(false)
-  const [showLoader, setShowLoader] = useState(runIntro)
   return (
     <I18nProvider>
-      {showLoader && <IntroLoader onDone={() => setShowLoader(false)} />}
       <CursorGlow />
       <ScrollProgress />
       <Topbar onLogin={() => setLoginOpen(true)} />
