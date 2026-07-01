@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: #031238;
+    --depth: #021a4a;
+    --accent: #2e6f9e;
+    --accent2: #1b3a5c;
+    --ink: #0b1b3a;
+    --muted: #5a6781;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+    /* Fundo de marca (papel de parede crasto.ai) — gradiente navy com brilho
+       azul nos cantos. Opção 1 p/ seções escuras. Branco segue padrão do site. */
+    --page-grad:
+      radial-gradient(ellipse 90% 70% at 6% -6%,   rgba(110, 156, 232, 0.22) 0%, transparent 56%),
+      radial-gradient(ellipse 85% 75% at 106% 108%, rgba(110, 156, 232, 0.13) 0%, transparent 56%),
+      linear-gradient(157deg, #031238 0%, #021a4a 50%, #010e26 100%);
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-wrap px-6;
+  }
+
+  /* Fundos de seção/página — hierarquia da marca.
+     .bg-page-grad = opção 1 (gradiente navy/papel de parede) · texto branco.
+     .bg-navy-flat = opção 2 (navy chapado). Branco continua o default do site. */
+  .bg-page-grad {
+    background: var(--page-grad);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    @apply text-white;
+  }
+  .bg-navy-flat {
+    @apply bg-navy text-white;
+  }
+
+  /* Botão primário (gradiente accent) */
+  .btn {
+    @apply inline-flex cursor-pointer items-center gap-2 rounded-xl font-bold text-white;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    box-shadow: 0 8px 20px -10px rgba(46, 111, 158, 0.7);
+    transition: transform 0.2s var(--ease), box-shadow 0.3s var(--ease);
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px -8px rgba(46, 111, 158, 0.9);
+  }
+  .btn.ghost {
+    @apply border border-line2 bg-transparent text-navy;
+    background: none;
+    box-shadow: none;
+  }
+}
+
+/* Barra de progresso de scroll */
+#prog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  z-index: 60;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform-origin: 0%;
+}
