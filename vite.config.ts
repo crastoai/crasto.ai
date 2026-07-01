@@ -15,4 +15,17 @@ export default defineConfig({
     port: 5173,
     open: true,   // abre o navegador automaticamente
   },
+  build: {
+    // Divide bibliotecas pesadas em chunks próprios: cacheiam entre deploys
+    // e o app carrega mais rápido em visitas seguintes.
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          motion: ['framer-motion'],
+          gsap: ['gsap', '@gsap/react'],
+        },
+      },
+    },
+  },
 })
