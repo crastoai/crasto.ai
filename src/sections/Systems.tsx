@@ -2,12 +2,12 @@ import { useI18n } from '@/i18n/i18n'
 import Reveal from '@/components/Reveal'
 import SystemMockup from '@/components/SystemMockup'
 
-type Sys = { key: string; variant: 'crm' | 'finance' | 'marketing' | 'consultor'; url: string }
+type Sys = { key: string; variant: 'crm' | 'finance' | 'marketing' | 'consultor' }
 const SYSTEMS: Sys[] = [
-  { key: 'crm', variant: 'crm', url: 'crm.crasto⁠.ai' },
-  { key: 'mkt', variant: 'marketing', url: 'social.crasto⁠.ai' },
-  { key: 'fin', variant: 'finance', url: 'financeiro.crasto⁠.ai' },
-  { key: 'con', variant: 'consultor', url: 'consultor.crasto⁠.ai' },
+  { key: 'crm', variant: 'crm' },
+  { key: 'mkt', variant: 'marketing' },
+  { key: 'fin', variant: 'finance' },
+  { key: 'con', variant: 'consultor' },
 ]
 
 export default function Systems() {
@@ -31,7 +31,7 @@ export default function Systems() {
                 <h3>{t(`sys_${s.key}_t`)}</h3>
                 <p>{t(`sys_${s.key}_p`)}</p>
               </div>
-              <SystemMockup variant={s.variant} url={s.url} />
+              <SystemMockup variant={s.variant} url={t(`mck_url_${s.key}`)} />
             </div>
           </Reveal>
         ))}

@@ -67,6 +67,13 @@ const pt: Dict = {
   ld_eb: 'Sócios & mentores', ld_h: 'Quem lidera a Crasto⁠.ai',
   ld_crasto: 'Founder, CEO & AI Specialist', ld_jhon: 'Techlead, Especialista em IA e Suporte Técnico', ld_juliana: 'Engenheira, Estrategista e Especialista em Testes', ld_julie: 'Agente autônoma de IA · Comercial e Relacionamento com clientes',
   ld_ai_t: 'Agentes Autônomos', ld_ai: 'Um exército de agentes de IA autônomos com superinteligência generativa.',
+  // "Blocos vivos" (mockups animados) — trocam de idioma junto com o site
+  mck_crm_title: 'Pipeline de Vendas', mck_crm_new: '+ Novo Lead', mck_crm_c1: 'Novo', mck_crm_c2: 'Qualificando', mck_crm_c3: 'Quente', mck_crm_c4: 'Convertido',
+  mck_crm_l1: 'Ana · Moda', mck_crm_l2: 'João · Solar', mck_crm_l3: 'Bruno · Jurídico', mck_crm_fly: 'Marina · Seguros',
+  mck_fin_recv: 'A receber', mck_fin_pay: 'A pagar', mck_fin_margin: 'Margem', mck_fin_r1: 'Redução de despesas', mck_fin_r2: 'Aumento de margem', mck_fin_tl: 'Faturamento · timeline',
+  mck_mkt_cal: 'Calendário · Julho', mck_mkt_meta: '✨ Post gerado pela IA · publicado no Instagram',
+  mck_con_title: 'Maestro dos agentes · sincronizando', mck_con_i1: 'Processo comercial', mck_con_i2: 'Playbook de atendimento', mck_con_i3: 'Fluxo financeiro', mck_con_i4: 'Instruções → todos os agentes', mck_con_upd: 'atualizado', mck_con_sync: 'sincronizado',
+  mck_url_crm: 'crm.crasto⁠.ai', mck_url_mkt: 'social.crasto⁠.ai', mck_url_fin: 'financeiro.crasto⁠.ai', mck_url_con: 'consultor.crasto⁠.ai',
 }
 
 const en: Dict = {
@@ -123,6 +130,13 @@ const en: Dict = {
   ld_eb: 'Partners & team', ld_h: 'Who leads Crasto⁠.ai',
   ld_crasto: 'Founder, CEO & AI Specialist', ld_jhon: 'Techlead, AI Specialist & Technical Support', ld_juliana: 'Engineer, Strategist & QA Specialist', ld_julie: 'Autonomous AI Agent · Sales & Client Relations',
   ld_ai_t: 'Autonomous Agents', ld_ai: 'An army of autonomous AI agents with generative superintelligence.',
+  // "Living blocks" (animated mockups) — switch language with the site
+  mck_crm_title: 'Sales Pipeline', mck_crm_new: '+ New Lead', mck_crm_c1: 'New', mck_crm_c2: 'Qualifying', mck_crm_c3: 'Hot', mck_crm_c4: 'Converted',
+  mck_crm_l1: 'Ana · Fashion', mck_crm_l2: 'João · Solar', mck_crm_l3: 'Bruno · Legal', mck_crm_fly: 'Marina · Insurance',
+  mck_fin_recv: 'Receivable', mck_fin_pay: 'Payable', mck_fin_margin: 'Margin', mck_fin_r1: 'Cost reduction', mck_fin_r2: 'Margin increase', mck_fin_tl: 'Revenue · timeline',
+  mck_mkt_cal: 'Calendar · July', mck_mkt_meta: '✨ AI-generated post · published on Instagram',
+  mck_con_title: 'Agent conductor · syncing', mck_con_i1: 'Sales process', mck_con_i2: 'Support playbook', mck_con_i3: 'Financial flow', mck_con_i4: 'Instructions → all agents', mck_con_upd: 'updated', mck_con_sync: 'synced',
+  mck_url_crm: 'crm.crasto⁠.ai', mck_url_mkt: 'social.crasto⁠.ai', mck_url_fin: 'finance.crasto⁠.ai', mck_url_con: 'consultor.crasto⁠.ai',
 }
 
 const es: Dict = {
